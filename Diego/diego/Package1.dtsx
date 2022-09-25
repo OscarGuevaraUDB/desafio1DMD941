@@ -12,8 +12,8 @@
   DTS:LocaleID="1033"
   DTS:MaxErrorCount="0"
   DTS:ObjectName="Package1"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{40C7F129-5BE8-4B54-81A1-BDAEAEC5CDF2}">
+  DTS:VersionBuild="25"
+  DTS:VersionGUID="{981445CC-F52C-4FFF-8AE7-AA99499E4B2C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -309,6 +309,17 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{5DB4ED9F-1A21-4437-B90D-2156CDFEB070}"
+      DTS:ObjectName="suc_escalon">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">escalon</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
@@ -327,6 +338,228 @@
           defaultBufferSize="3145728"
           version="1">
           <components>
+            <component
+              refId="Package\Data Flow Task 1\Derivada Centro"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derivada Centro"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Derivada Centro.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Derivada Centro.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task 1\Derivada Centro.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Derivada Centro.Outputs[Derived Column Output].Columns[Sucursal]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="3"
+                      lineageId="Package\Data Flow Task 1\Derivada Centro.Outputs[Derived Column Output].Columns[Sucursal]"
+                      name="Sucursal"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"Cen"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"Cen"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Derivada Centro.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task 1\Derivada Centro.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Derivada Centro.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Derivada Centro.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Derivada Centro.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Derivada Centro.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Derivada Tecla"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derivada Tecla"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Derivada Tecla.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Derivada Tecla.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task 1\Derivada Tecla.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Derivada Tecla.Outputs[Derived Column Output].Columns[Sucursal]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="3"
+                      lineageId="Package\Data Flow Task 1\Derivada Tecla.Outputs[Derived Column Output].Columns[Sucursal]"
+                      name="Sucursal"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"Tec"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"Tec"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Derivada Tecla.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task 1\Derivada Tecla.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Derivada Tecla.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Derivada Tecla.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Derivada Tecla.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Derivada Tecla.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Derived Escalon"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Escalon"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Derived Escalon.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Derived Escalon.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task 1\Derived Escalon.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Derived Escalon.Outputs[Derived Column Output].Columns[Sucursal]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="3"
+                      lineageId="Package\Data Flow Task 1\Derived Escalon.Outputs[Derived Column Output].Columns[Sucursal]"
+                      name="Sucursal"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"Esc"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"Esc"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Derived Escalon.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task 1\Derived Escalon.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Derived Escalon.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Derived Escalon.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Derived Escalon.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Derived Escalon.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007"
               componentClassID="Microsoft.OLEDBDestination"
@@ -455,6 +688,13 @@
                       cachedName="Yoga"
                       externalMetadataColumnId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].ExternalColumns[Yoga]"
                       lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Yoga]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].Columns[Sucursal]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="Sucursal"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].ExternalColumns[Sucursal]"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Sucursal]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -497,7 +737,8 @@
                       name="Yoga" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].ExternalColumns[Sucursal]"
-                      dataType="ui1"
+                      dataType="wstr"
+                      length="50"
                       name="Sucursal" />
                   </externalMetadataColumns>
                 </input>
@@ -1385,7 +1626,288 @@
               version="1">
               <inputs>
                 <input
+                  refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 4]"
+                  hasSideEffects="true"
+                  name="Union All Input 4">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 4].Columns[id]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="id"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 4].Columns[Sexo]"
+                      cachedDataType="ui1"
+                      cachedName="Sexo"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Sexo]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Sexo]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 4].Columns[ingresos]"
+                      cachedDataType="r4"
+                      cachedName="ingresos"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[ingresos]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[ingresos]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 4].Columns[PromVisit]"
+                      cachedDataType="ui1"
+                      cachedName="PromVisit"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[PromVisit]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[PromVisit]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 4].Columns[Edad]"
+                      cachedDataType="ui1"
+                      cachedName="Edad"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Edad]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Edad]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 4].Columns[Sauna]"
+                      cachedDataType="ui1"
+                      cachedName="Sauna"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Sauna]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Sauna]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 4].Columns[Masaje]"
+                      cachedDataType="ui1"
+                      cachedName="Masaje"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Masaje]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Masaje]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 4].Columns[Hidro]"
+                      cachedDataType="ui1"
+                      cachedName="Hidro"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Hidro]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Hidro]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 4].Columns[Yoga]"
+                      cachedDataType="ui1"
+                      cachedName="Yoga"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Yoga]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Yoga]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 4].Columns[Sucursal]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="Sucursal"
+                      lineageId="Package\Data Flow Task 1\Derivada Centro.Outputs[Derived Column Output].Columns[Sucursal]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Sucursal]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3]"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[id]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="id"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Sexo]"
+                      cachedDataType="ui1"
+                      cachedName="Sexo"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Sexo]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Sexo]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[ingresos]"
+                      cachedDataType="r4"
+                      cachedName="ingresos"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[ingresos]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[ingresos]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[PromVisit]"
+                      cachedDataType="ui1"
+                      cachedName="PromVisit"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[PromVisit]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[PromVisit]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Edad]"
+                      cachedDataType="ui1"
+                      cachedName="Edad"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Edad]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Edad]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Sauna]"
+                      cachedDataType="ui1"
+                      cachedName="Sauna"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Sauna]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Sauna]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Masaje]"
+                      cachedDataType="ui1"
+                      cachedName="Masaje"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Masaje]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Masaje]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Hidro]"
+                      cachedDataType="ui1"
+                      cachedName="Hidro"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Hidro]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Hidro]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Yoga]"
+                      cachedDataType="ui1"
+                      cachedName="Yoga"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Yoga]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Yoga]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Sucursal]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="Sucursal"
+                      lineageId="Package\Data Flow Task 1\Derived Escalon.Outputs[Derived Column Output].Columns[Sucursal]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Sucursal]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
                   refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1]"
+                  hasSideEffects="true"
                   name="Union All Input 1">
                   <inputColumns>
                     <inputColumn
@@ -1506,266 +2028,28 @@
                           name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Yoga]}</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[Sucursal]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="Sucursal"
+                      lineageId="Package\Data Flow Task 1\Derivada Tecla.Outputs[Derived Column Output].Columns[Sucursal]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Sucursal]}</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
                 <input
                   refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2]"
-                  hasSideEffects="true"
-                  name="Union All Input 2">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[id]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="id"
-                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[id]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[id]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[Sexo]"
-                      cachedDataType="ui1"
-                      cachedName="Sexo"
-                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Sexo]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Sexo]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[ingresos]"
-                      cachedDataType="r4"
-                      cachedName="ingresos"
-                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[ingresos]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[ingresos]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[PromVisit]"
-                      cachedDataType="ui1"
-                      cachedName="PromVisit"
-                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[PromVisit]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[PromVisit]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[Edad]"
-                      cachedDataType="ui1"
-                      cachedName="Edad"
-                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Edad]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Edad]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[Sauna]"
-                      cachedDataType="ui1"
-                      cachedName="Sauna"
-                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Sauna]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Sauna]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[Masaje]"
-                      cachedDataType="ui1"
-                      cachedName="Masaje"
-                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Masaje]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Masaje]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[Hidro]"
-                      cachedDataType="ui1"
-                      cachedName="Hidro"
-                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Hidro]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Hidro]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[Yoga]"
-                      cachedDataType="ui1"
-                      cachedName="Yoga"
-                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Yoga]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Yoga]}</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3]"
-                  hasSideEffects="true"
-                  name="Union All Input 3">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[id]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="id"
-                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[id]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[id]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Sexo]"
-                      cachedDataType="ui1"
-                      cachedName="Sexo"
-                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Sexo]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Sexo]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[ingresos]"
-                      cachedDataType="r4"
-                      cachedName="ingresos"
-                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[ingresos]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[ingresos]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[PromVisit]"
-                      cachedDataType="ui1"
-                      cachedName="PromVisit"
-                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[PromVisit]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[PromVisit]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Edad]"
-                      cachedDataType="ui1"
-                      cachedName="Edad"
-                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Edad]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Edad]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Sauna]"
-                      cachedDataType="ui1"
-                      cachedName="Sauna"
-                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Sauna]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Sauna]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Masaje]"
-                      cachedDataType="ui1"
-                      cachedName="Masaje"
-                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Masaje]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Masaje]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Hidro]"
-                      cachedDataType="ui1"
-                      cachedName="Hidro"
-                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Hidro]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Hidro]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Yoga]"
-                      cachedDataType="ui1"
-                      cachedName="Yoga"
-                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Yoga]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Yoga]}</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 4]"
                   dangling="true"
                   hasSideEffects="true"
-                  name="Union All Input 4">
+                  name="Union All Input 2">
                   <externalMetadataColumns />
                 </input>
               </inputs>
@@ -1820,6 +2104,12 @@
                       dataType="ui1"
                       lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Yoga]"
                       name="Yoga" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Sucursal]"
+                      dataType="wstr"
+                      length="6"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Sucursal]"
+                      name="Sucursal" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -1828,20 +2118,35 @@
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task 1.Paths[Flat File Source Output]"
+              refId="Package\Data Flow Task 1.Paths[Derived Column Output]"
+              endId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 4]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task 1\Derivada Centro.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task 1.Paths[Derived Column Output1]"
+              endId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task 1\Derived Escalon.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task 1.Paths[Derived Column Output2]"
               endId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task 1\Derivada Tecla.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task 1.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task 1\Derivada Centro.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task 1.Paths[Flat File Source Output1]"
+              endId="Package\Data Flow Task 1\Derivada Tecla.Inputs[Derived Column Input]"
               name="Flat File Source Output"
               startId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output]" />
             <path
-              refId="Package\Data Flow Task 1.Paths[Flat File Source Output1]"
-              endId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2]"
+              refId="Package\Data Flow Task 1.Paths[Flat File Source Output2]"
+              endId="Package\Data Flow Task 1\Derived Escalon.Inputs[Derived Column Input]"
               name="Flat File Source Output"
               startId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output]" />
-            <path
-              refId="Package\Data Flow Task 1.Paths[Flat File Source Output2]"
-              endId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3]"
-              name="Flat File Source Output"
-              startId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output]" />
             <path
               refId="Package\Data Flow Task 1.Paths[Union All Output 1]"
               endId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input]"
@@ -1881,7 +2186,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{8DD93794-F694-4653-A083-99B832690252}"
-          SQLTask:SqlStatementSource="IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Spa_diego' and xtype='U')&#xA;CREATE TABLE  [dbo].[Spa_diego] (&#xA;[id] nvarchar(50),&#xA;[Sexo] tinyint,&#xA;[ingresos] real,&#xA;[PromVisit] tinyint,&#xA;[Edad] tinyint,&#xA;[Sauna] tinyint,&#xA;[Masaje] tinyint,&#xA;[Hidro] tinyint,&#xA;[Yoga] tinyint)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Spa_diego' and xtype='U')&#xA;CREATE TABLE  [dbo].[Spa_diego] (&#xA;[id] nvarchar(50),&#xA;[Sexo] tinyint,&#xA;[ingresos] real,&#xA;[PromVisit] tinyint,&#xA;[Edad] tinyint,&#xA;[Sauna] tinyint,&#xA;[Masaje] tinyint,&#xA;[Hidro] tinyint,&#xA;[Yoga] tinyint,&#xA;[Sucursal] nvarchar(50)&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -1919,7 +2224,7 @@
         <NodeLayout
           Size="160,42"
           Id="Package\Data Flow Task 1"
-          TopLeft="283.5,208.5" />
+          TopLeft="282.5,207.5" />
         <NodeLayout
           Size="198,42"
           Id="Package\Drop table(s) SQL Task 1"
@@ -1934,26 +2239,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="259,59"
+              EndConnector="258,58"
               Start="0,0"
-              End="259,51.5">
+              End="258,50.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.5" />
+                    End="0,25" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,25.5"
-                    Point2="0,29.5"
-                    Point3="4,29.5" />
+                    Point1="0,25"
+                    Point2="0,29"
+                    Point3="4,29" />
                   <mssgle:LineSegment
-                    End="255,29.5" />
+                    End="254,29" />
                   <mssgle:CubicBezierSegment
-                    Point1="255,29.5"
-                    Point2="259,29.5"
-                    Point3="259,33.5" />
+                    Point1="254,29"
+                    Point2="258,29"
+                    Point3="258,33" />
                   <mssgle:LineSegment
-                    End="259,51.5" />
+                    End="258,50.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1995,51 +2300,65 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="153,42"
-          Id="Package\Data Flow Task 1\Source - Centro"
-          TopLeft="27.5,37.5" />
-        <NodeLayout
-          Size="252,42"
-          Id="Package\Data Flow Task 1\Destination - SpaCentro_m20191007"
-          TopLeft="262.5,382.5" />
+          Size="157,42"
+          Id="Package\Data Flow Task 1\Source - Escalon"
+          TopLeft="515.5,23.5" />
         <NodeLayout
           Size="146,42"
           Id="Package\Data Flow Task 1\Source - Tecla"
-          TopLeft="304.5,23.5" />
+          TopLeft="331.5,23.5" />
         <NodeLayout
-          Size="157,42"
-          Id="Package\Data Flow Task 1\Source - Escalon"
-          TopLeft="689.5,34.5" />
+          Size="153,42"
+          Id="Package\Data Flow Task 1\Source - Centro"
+          TopLeft="118.5,25.5" />
         <NodeLayout
           Size="121,42"
           Id="Package\Data Flow Task 1\Union All"
           TopLeft="337,220" />
+        <NodeLayout
+          Size="252,42"
+          Id="Package\Data Flow Task 1\Destination - SpaCentro_m20191007"
+          TopLeft="268.5,389.5" />
         <EdgeLayout
-          Id="Package\Data Flow Task 1.Paths[Flat File Source Output]"
-          TopLeft="377.5,65.5">
+          Id="Package\Data Flow Task 1.Paths[Union All Output 1]"
+          TopLeft="396,262">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="20,154.5"
+              EndConnector="0,127.5"
               Start="0,0"
-              End="20,147">
+              End="0,120">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,73.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,73.25"
-                    Point2="0,77.25"
-                    Point3="4,77.25" />
+                    End="0,120" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Data Flow Task 1\Derivada Centro"
+          TopLeft="120,98" />
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[Flat File Source Output]"
+          TopLeft="196.25,67.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30.5"
+              Start="0,0"
+              End="0,23">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="16,77.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="16,77.25"
-                    Point2="20,77.25"
-                    Point3="20,81.25" />
-                  <mssgle:LineSegment
-                    End="20,147" />
+                    End="0,23" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2049,31 +2368,61 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task 1.Paths[Flat File Source Output1]"
-          TopLeft="768,76.5">
+          Id="Package\Data Flow Task 1.Paths[Derived Column Output]"
+          TopLeft="197.5,140">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-342.25,143.5"
+              EndConnector="171.75,80"
               Start="0,0"
-              End="-342.25,136">
+              End="171.75,72.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,89.6037735849057" />
+                    End="0,48.1832884097035" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,89.6037735849057"
-                    Point2="0,93.6037735849057"
-                    Point3="-4,93.6037735849057" />
+                    Point1="0,48.1832884097035"
+                    Point2="0,52.1832884097035"
+                    Point3="4,52.1832884097035" />
                   <mssgle:LineSegment
-                    End="-338.25,93.6037735849057" />
+                    End="167.75,52.1832884097035" />
                   <mssgle:CubicBezierSegment
-                    Point1="-338.25,93.6037735849057"
-                    Point2="-342.25,93.6037735849057"
-                    Point3="-342.25,97.6037735849057" />
+                    Point1="167.75,52.1832884097035"
+                    Point2="171.75,52.1832884097035"
+                    Point3="171.75,56.1832884097035" />
                   <mssgle:LineSegment
-                    End="-342.25,136" />
+                    End="171.75,72.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="149,42"
+          Id="Package\Data Flow Task 1\Derivada Tecla"
+          TopLeft="323,93" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Data Flow Task 1\Derived Escalon"
+          TopLeft="510.5,92.5" />
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[Flat File Source Output1]"
+          TopLeft="401,65.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27.5"
+              Start="0,0"
+              End="0,20">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2084,30 +2433,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task 1.Paths[Flat File Source Output2]"
-          TopLeft="104,79.5">
+          TopLeft="590.75,65.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="265.25,140.5"
+              EndConnector="0,27"
               Start="0,0"
-              End="265.25,133">
+              End="0,19.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,87.6469002695418" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,87.6469002695418"
-                    Point2="0,91.6469002695418"
-                    Point3="4,91.6469002695418" />
-                  <mssgle:LineSegment
-                    End="261.25,91.6469002695418" />
-                  <mssgle:CubicBezierSegment
-                    Point1="261.25,91.6469002695418"
-                    Point2="265.25,91.6469002695418"
-                    Point3="265.25,95.6469002695418" />
-                  <mssgle:LineSegment
-                    End="265.25,133" />
+                    End="0,19.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2117,31 +2454,53 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task 1.Paths[Union All Output 1]"
-          TopLeft="397.5,262">
+          Id="Package\Data Flow Task 1.Paths[Derived Column Output1]"
+          TopLeft="587.5,134.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-9,120.5"
+              EndConnector="-161.75,85.5"
               Start="0,0"
-              End="-9,113">
+              End="-161.75,78">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,56.25" />
+                    End="0,51.7708894878706" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,56.25"
-                    Point2="0,60.25"
-                    Point3="-4,60.25" />
+                    Point1="0,51.7708894878706"
+                    Point2="0,55.7708894878706"
+                    Point3="-4,55.7708894878706" />
                   <mssgle:LineSegment
-                    End="-5,60.25" />
+                    End="-157.75,55.7708894878706" />
                   <mssgle:CubicBezierSegment
-                    Point1="-5,60.25"
-                    Point2="-9,60.25"
-                    Point3="-9,64.25" />
+                    Point1="-157.75,55.7708894878706"
+                    Point2="-161.75,55.7708894878706"
+                    Point3="-161.75,59.7708894878706" />
                   <mssgle:LineSegment
-                    End="-9,113" />
+                    End="-161.75,78" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[Derived Column Output2]"
+          TopLeft="397.5,135">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,85"
+              Start="0,0"
+              End="0,77.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,77.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
