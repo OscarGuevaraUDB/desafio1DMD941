@@ -1,54 +1,43 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="9/24/2022 8:50:05 AM"
+  DTS:CreationDate="9/24/2022 7:27:11 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="LAPTOP-2J6JSSGM"
   DTS:CreatorName="LAPTOP-2J6JSSGM\Got2l"
   DTS:Description="DTS Wizard-generated package"
-  DTS:DTSID="{606467B0-C465-4235-830A-09BBE21E49C2}"
+  DTS:DTSID="{FA63E1D6-B89E-453F-ADD8-E571FF0FD84E}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.845.0"
   DTS:LocaleID="1033"
   DTS:MaxErrorCount="0"
   DTS:ObjectName="Package1"
-  DTS:VersionGUID="{DEDB4AAE-CD26-4A14-AB39-A7833EF71767}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{40C7F129-5BE8-4B54-81A1-BDAEAEC5CDF2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DestinationConnectionExcel]"
-      DTS:CreationName="EXCEL"
-      DTS:DTSID="{A62B692D-203E-406D-91CA-E120EB3CE4E6}"
-      DTS:ObjectName="DestinationConnectionExcel">
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{8DD93794-F694-4653-A083-99B832690252}"
+      DTS:ObjectName="DestinationConnectionOLEDB">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectRetryCount="0"
-          DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Got2l\OneDrive\Documentos\don bosco\ciclo 3\Datawarehouse y Minería de Datos\desafio 1\Diego\resultado.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=ejercicio1;Provider=SQLNCLI11;Integrated Security=SSPI;Auto Translate=false;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[SourceConnectionExcel]"
-      DTS:CreationName="EXCEL"
-      DTS:DTSID="{ABB1E88D-3EAC-48B8-86ED-DDBD69B45EA8}"
-      DTS:ObjectName="SourceConnectionExcel">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="0"
-          DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[SourceConnectionFlatFile]"
+      DTS:refId="Package.ConnectionManagers[SourceCentro]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{A6D3F1D1-C0DA-4030-B922-A2D98EDD696B}"
-      DTS:ObjectName="SourceConnectionFlatFile">
+      DTS:DTSID="{CDEA01E1-39A3-41AF-9C8D-4414480802A0}"
+      DTS:ObjectName="SourceCentro">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
-          DTS:LocaleID="17418"
+          DTS:LocaleID="1033"
           DTS:HeaderRowDelimiter="_x000D__x000A_"
           DTS:ColumnNamesInFirstDataRow="True"
           DTS:RowDelimiter=""
@@ -60,80 +49,260 @@
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="id"
-              DTS:DTSID="{84D39968-51A1-4788-928E-82A4FBEE2880}"
+              DTS:DTSID="{63FD8D35-5675-41FA-AE39-254444294271}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="14"
+              DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="Sexo"
-              DTS:DTSID="{8765FE85-3D1B-4859-83B6-7238A30152C8}"
+              DTS:DTSID="{6FC5D22E-632F-4349-A717-68965E90B7F6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="6"
+              DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="ingresos"
-              DTS:DTSID="{39CC6563-7A3B-4735-AA8A-44458A419FDF}"
+              DTS:DTSID="{0FECACDE-FFF6-4B7D-9BFE-90D0A20AA584}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="PromVisit"
-              DTS:DTSID="{DF0FE908-5AF8-48F2-B307-1650126FDEEA}"
+              DTS:DTSID="{43AFBA7D-D6ED-4A33-883C-A2232CD87DDD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="Edad"
-              DTS:DTSID="{3687185D-7905-4809-8B56-975653C4FC0F}"
+              DTS:DTSID="{131298BB-C02D-4E06-B956-5ABE5CA979E5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="Sauna"
-              DTS:DTSID="{280EB44A-C3BF-4765-999D-7A48A93FD07A}"
+              DTS:DTSID="{F2B4E426-896E-4BB8-BE9B-66022E54D378}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="Masaje"
-              DTS:DTSID="{70548680-81AA-49C1-8438-5821D7B996E9}"
+              DTS:DTSID="{8EFEA608-8152-4252-A64E-C41A55959D44}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="Hidro"
-              DTS:DTSID="{3F0FB9D2-F1A4-4AD3-AD4B-22CBAFAECA7A}"
+              DTS:DTSID="{DB14B558-80DE-4ABB-BCDB-1EFF17970077}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000A_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="Yoga"
-              DTS:DTSID="{FBF72C42-0E0F-4B00-8DC0-E46744736941}"
+              DTS:DTSID="{88847E00-D280-478A-89AC-7003D5D5211A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceEscalon]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{bc3c6d81-0bf0-4c2b-9752-7e674542d51e}"
+      DTS:ObjectName="SourceEscalon">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Got2l\OneDrive\Documentos\don bosco\ciclo 3\Datawarehouse y Minería de Datos\desafio 1\Diego\SpaEscalon_i20191007.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{1CA37936-03FF-4B15-AB2F-28DC2045090E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sexo"
+              DTS:DTSID="{9CAE0AB3-8D75-4242-9616-C2397A4E2712}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ingresos"
+              DTS:DTSID="{DBB5E71C-3057-4263-9B43-03A3D62ADBA6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PromVisit"
+              DTS:DTSID="{B207A198-1556-4820-9745-68A5E4E63FDA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Edad"
+              DTS:DTSID="{3E78BF70-9031-43B8-A993-52CD6E90434D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sauna"
+              DTS:DTSID="{38901725-DF48-4B48-8994-50D0139B2284}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Masaje"
+              DTS:DTSID="{DF5B11A4-FDC0-4E26-B414-1634A4B03031}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hidro"
+              DTS:DTSID="{D8A6A14A-DE5B-429E-8940-741AE1433628}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Yoga"
+              DTS:DTSID="{23853E69-5523-4986-B8D3-7271B65FEFC0}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceTecla]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{a5fad775-b655-4cd0-889b-1181f749fa4a}"
+      DTS:ObjectName="SourceTecla">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Got2l\OneDrive\Documentos\don bosco\ciclo 3\Datawarehouse y Minería de Datos\desafio 1\Diego\SpaSantaTecla_m20191007.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{E60B297C-7A38-49E3-8A37-1A95A3565483}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sexo"
+              DTS:DTSID="{35A4FABF-923A-4ECB-8595-75520CD7FB30}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ingresos"
+              DTS:DTSID="{71EEC35A-8263-4799-86C7-3DEA7B4CEA98}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PromVisit"
+              DTS:DTSID="{B9CCAB4A-ACE6-4FDD-8F7F-1E72D2E13FC3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Edad"
+              DTS:DTSID="{CDC0271A-118C-4735-B013-2B57EB774335}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sauna"
+              DTS:DTSID="{3F257A77-0198-431B-B27F-CC61ED022FD8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Masaje"
+              DTS:DTSID="{7B9B6D19-BF3A-48E6-A06D-ABEF0106A327}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hidro"
+              DTS:DTSID="{61D3BD5C-37F3-4D20-8977-BA4BA04E1B01}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Yoga"
+              DTS:DTSID="{D1C7629C-CF98-496C-BBD9-9804CB53A5EF}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -146,7 +315,7 @@
       DTS:refId="Package\Data Flow Task 1"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:DelayValidation="True"
-      DTS:DTSID="{ABBC859D-682C-4F4B-9096-01A01C9B6DDC}"
+      DTS:DTSID="{00040051-1A05-42C6-95DE-FA67D7E3E204}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:FailPackageOnFailure="True"
       DTS:LocaleID="-1"
@@ -159,145 +328,14 @@
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task 1\Data Conversion 0 - 0"
-              componentClassID="Microsoft.DataConvert"
-              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Data Conversion"
-              name="Data Conversion 0 - 0"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input]"
-                  name="Data Conversion Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[id]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="id"
-                      lineageId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[id]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[Sexo]"
-                      cachedDataType="decimal"
-                      cachedName="Sexo"
-                      lineageId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[Sexo]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input].Columns[PromVisit]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="PromVisit"
-                      lineageId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[PromVisit]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output]"
-                  exclusionGroup="1"
-                  name="Data Conversion Output"
-                  synchronousInputId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[id]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[id]"
-                      name="id"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[id]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Sexo]"
-                      dataType="numeric"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Sexo]"
-                      name="Sexo"
-                      precision="28"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[Sexo]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[PromVisit]"
-                      dataType="numeric"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[PromVisit]"
-                      name="PromVisit"
-                      precision="28"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[PromVisit]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Data Conversion Error Output"
-                  synchronousInputId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007"
-              componentClassID="Microsoft.ExcelDestination"
-              contactInfo="Excel Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Excel Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
               name="Destination - SpaCentro_m20191007"
               usesDispositions="true"
-              validateExternalMetadata="False">
+              validateExternalMetadata="False"
+              version="4">
               <properties>
                 <property
                   dataType="System.Int32"
@@ -306,7 +344,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">SpaCentro_m20191007</property>
+                  name="OpenRowset">[dbo].[Spa_diego]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -315,16 +353,24 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
+                  name="FastLoadKeepIdentity">true</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
@@ -332,7 +378,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -341,8 +387,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionExcel]"
-                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionExcel]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -360,62 +406,55 @@
                       cachedLength="50"
                       cachedName="id"
                       externalMetadataColumnId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].ExternalColumns[id]"
-                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[id]" />
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[id]" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].Columns[Sexo]"
-                      cachedDataType="numeric"
+                      cachedDataType="ui1"
                       cachedName="Sexo"
-                      cachedPrecision="28"
                       externalMetadataColumnId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].ExternalColumns[Sexo]"
-                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[Sexo]" />
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Sexo]" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].Columns[ingresos]"
-                      cachedDataType="cy"
+                      cachedDataType="r4"
                       cachedName="ingresos"
                       externalMetadataColumnId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].ExternalColumns[ingresos]"
-                      lineageId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[ingresos]" />
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[ingresos]" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].Columns[PromVisit]"
-                      cachedDataType="numeric"
+                      cachedDataType="ui1"
                       cachedName="PromVisit"
-                      cachedPrecision="28"
                       externalMetadataColumnId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].ExternalColumns[PromVisit]"
-                      lineageId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output].Columns[PromVisit]" />
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[PromVisit]" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].Columns[Edad]"
-                      cachedDataType="numeric"
+                      cachedDataType="ui1"
                       cachedName="Edad"
-                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].ExternalColumns[Edad]"
-                      lineageId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[Edad]" />
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Edad]" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].Columns[Sauna]"
-                      cachedDataType="numeric"
+                      cachedDataType="ui1"
                       cachedName="Sauna"
-                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].ExternalColumns[Sauna]"
-                      lineageId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[Sauna]" />
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Sauna]" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].Columns[Masaje]"
-                      cachedDataType="numeric"
+                      cachedDataType="ui1"
                       cachedName="Masaje"
-                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].ExternalColumns[Masaje]"
-                      lineageId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[Masaje]" />
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Masaje]" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].Columns[Hidro]"
-                      cachedDataType="numeric"
+                      cachedDataType="ui1"
                       cachedName="Hidro"
-                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].ExternalColumns[Hidro]"
-                      lineageId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[Hidro]" />
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Hidro]" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].Columns[Yoga]"
-                      cachedDataType="numeric"
+                      cachedDataType="ui1"
                       cachedName="Yoga"
-                      cachedPrecision="18"
                       externalMetadataColumnId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].ExternalColumns[Yoga]"
-                      lineageId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[Yoga]" />
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Yoga]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -426,64 +465,61 @@
                       name="id" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].ExternalColumns[Sexo]"
-                      dataType="numeric"
-                      name="Sexo"
-                      precision="28" />
+                      dataType="ui1"
+                      name="Sexo" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].ExternalColumns[ingresos]"
-                      dataType="cy"
+                      dataType="r4"
                       name="ingresos" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].ExternalColumns[PromVisit]"
-                      dataType="numeric"
-                      name="PromVisit"
-                      precision="28" />
+                      dataType="ui1"
+                      name="PromVisit" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].ExternalColumns[Edad]"
-                      dataType="numeric"
-                      name="Edad"
-                      precision="18" />
+                      dataType="ui1"
+                      name="Edad" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].ExternalColumns[Sauna]"
-                      dataType="numeric"
-                      name="Sauna"
-                      precision="18" />
+                      dataType="ui1"
+                      name="Sauna" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].ExternalColumns[Masaje]"
-                      dataType="numeric"
-                      name="Masaje"
-                      precision="18" />
+                      dataType="ui1"
+                      name="Masaje" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].ExternalColumns[Hidro]"
-                      dataType="numeric"
-                      name="Hidro"
-                      precision="18" />
+                      dataType="ui1"
+                      name="Hidro" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].ExternalColumns[Yoga]"
-                      dataType="numeric"
-                      name="Yoga"
-                      precision="18" />
+                      dataType="ui1"
+                      name="Yoga" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input].ExternalColumns[Sucursal]"
+                      dataType="ui1"
+                      name="Sucursal" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Outputs[Excel Destination Error Output]"
+                  refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
-                  name="Excel Destination Error Output"
+                  name="OLE DB Destination Error Output"
                   synchronousInputId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Outputs[Excel Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Outputs[Excel Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -492,12 +528,12 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv"
+              refId="Package\Data Flow Task 1\Source - Centro"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
-              localeId="17418"
-              name="Source - SpaCentro_m20191007_csv"
+              localeId="1033"
+              name="Source - Centro"
               usesDispositions="true"
               version="1">
               <properties>
@@ -512,25 +548,24 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[SourceConnectionFlatFile]"
-                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionFlatFile]"
+                  refId="Package\Data Flow Task 1\Source - Centro.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceCentro]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceCentro]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output]"
+                  refId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output]"
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[id]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[id]"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].ExternalColumns[id]"
                       length="50"
-                      lineageId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[id]"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[id]"
                       name="id"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -545,12 +580,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[Sexo]"
-                      dataType="decimal"
+                      refId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Sexo]"
+                      dataType="ui1"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].ExternalColumns[Sexo]"
-                      lineageId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[Sexo]"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].ExternalColumns[Sexo]"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Sexo]"
                       name="Sexo"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -565,12 +600,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[ingresos]"
-                      dataType="cy"
+                      refId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[ingresos]"
+                      dataType="r4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].ExternalColumns[ingresos]"
-                      lineageId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[ingresos]"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].ExternalColumns[ingresos]"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[ingresos]"
                       name="ingresos"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -585,14 +620,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[PromVisit]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[PromVisit]"
+                      dataType="ui1"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].ExternalColumns[PromVisit]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[PromVisit]"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].ExternalColumns[PromVisit]"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[PromVisit]"
                       name="PromVisit"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -607,14 +640,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[Edad]"
-                      dataType="numeric"
+                      refId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Edad]"
+                      dataType="ui1"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].ExternalColumns[Edad]"
-                      lineageId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[Edad]"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].ExternalColumns[Edad]"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Edad]"
                       name="Edad"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -628,14 +660,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[Sauna]"
-                      dataType="numeric"
+                      refId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Sauna]"
+                      dataType="ui1"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].ExternalColumns[Sauna]"
-                      lineageId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[Sauna]"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].ExternalColumns[Sauna]"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Sauna]"
                       name="Sauna"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -649,14 +680,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[Masaje]"
-                      dataType="numeric"
+                      refId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Masaje]"
+                      dataType="ui1"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].ExternalColumns[Masaje]"
-                      lineageId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[Masaje]"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].ExternalColumns[Masaje]"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Masaje]"
                       name="Masaje"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -670,14 +700,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[Hidro]"
-                      dataType="numeric"
+                      refId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Hidro]"
+                      dataType="ui1"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].ExternalColumns[Hidro]"
-                      lineageId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[Hidro]"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].ExternalColumns[Hidro]"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Hidro]"
                       name="Hidro"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -691,14 +720,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[Yoga]"
-                      dataType="numeric"
+                      refId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Yoga]"
+                      dataType="ui1"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].ExternalColumns[Yoga]"
-                      lineageId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].Columns[Yoga]"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].ExternalColumns[Yoga]"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Yoga]"
                       name="Yoga"
-                      precision="18"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -715,76 +743,1083 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].ExternalColumns[id]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      dataType="wstr"
                       length="50"
                       name="id" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].ExternalColumns[Sexo]"
-                      dataType="decimal"
+                      refId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].ExternalColumns[Sexo]"
+                      dataType="ui1"
                       name="Sexo" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].ExternalColumns[ingresos]"
-                      dataType="cy"
+                      refId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].ExternalColumns[ingresos]"
+                      dataType="r4"
                       name="ingresos" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].ExternalColumns[PromVisit]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      refId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].ExternalColumns[PromVisit]"
+                      dataType="ui1"
                       name="PromVisit" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].ExternalColumns[Edad]"
-                      dataType="numeric"
-                      name="Edad"
-                      precision="18" />
+                      refId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].ExternalColumns[Edad]"
+                      dataType="ui1"
+                      name="Edad" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].ExternalColumns[Sauna]"
-                      dataType="numeric"
-                      name="Sauna"
-                      precision="18" />
+                      refId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].ExternalColumns[Sauna]"
+                      dataType="ui1"
+                      name="Sauna" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].ExternalColumns[Masaje]"
-                      dataType="numeric"
-                      name="Masaje"
-                      precision="18" />
+                      refId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].ExternalColumns[Masaje]"
+                      dataType="ui1"
+                      name="Masaje" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].ExternalColumns[Hidro]"
-                      dataType="numeric"
-                      name="Hidro"
-                      precision="18" />
+                      refId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].ExternalColumns[Hidro]"
+                      dataType="ui1"
+                      name="Hidro" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output].ExternalColumns[Yoga]"
-                      dataType="numeric"
-                      name="Yoga"
-                      precision="18" />
+                      refId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].ExternalColumns[Yoga]"
+                      dataType="ui1"
+                      name="Yoga" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Error Output]"
+                  refId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
                   name="Flat File Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      refId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       codePage="1252"
                       dataType="text"
                       description="Flat File Source Error Output Column"
-                      lineageId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       name="Flat File Source Error Output Column" />
                     <outputColumn
-                      refId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Source - Escalon"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Source - Escalon"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Source - Escalon.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceEscalon]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceEscalon]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Sexo]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].ExternalColumns[Sexo]"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Sexo]"
+                      name="Sexo"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[ingresos]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].ExternalColumns[ingresos]"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[ingresos]"
+                      name="ingresos"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[PromVisit]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].ExternalColumns[PromVisit]"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[PromVisit]"
+                      name="PromVisit"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Edad]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].ExternalColumns[Edad]"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Edad]"
+                      name="Edad"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Sauna]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].ExternalColumns[Sauna]"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Sauna]"
+                      name="Sauna"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Masaje]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].ExternalColumns[Masaje]"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Masaje]"
+                      name="Masaje"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Hidro]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].ExternalColumns[Hidro]"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Hidro]"
+                      name="Hidro"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Yoga]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].ExternalColumns[Yoga]"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Yoga]"
+                      name="Yoga"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      dataType="wstr"
+                      length="50"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].ExternalColumns[Sexo]"
+                      dataType="ui1"
+                      name="Sexo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].ExternalColumns[ingresos]"
+                      dataType="r4"
+                      name="ingresos" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].ExternalColumns[PromVisit]"
+                      dataType="ui1"
+                      name="PromVisit" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].ExternalColumns[Edad]"
+                      dataType="ui1"
+                      name="Edad" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].ExternalColumns[Sauna]"
+                      dataType="ui1"
+                      name="Sauna" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].ExternalColumns[Masaje]"
+                      dataType="ui1"
+                      name="Masaje" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].ExternalColumns[Hidro]"
+                      dataType="ui1"
+                      name="Hidro" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].ExternalColumns[Yoga]"
+                      dataType="ui1"
+                      name="Yoga" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Source - Tecla"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Source - Tecla"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Source - Tecla.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceTecla]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceTecla]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].Columns[id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].Columns[Sexo]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].ExternalColumns[Sexo]"
+                      lineageId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].Columns[Sexo]"
+                      name="Sexo"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].Columns[ingresos]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].ExternalColumns[ingresos]"
+                      lineageId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].Columns[ingresos]"
+                      name="ingresos"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].Columns[PromVisit]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].ExternalColumns[PromVisit]"
+                      lineageId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].Columns[PromVisit]"
+                      name="PromVisit"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].Columns[Edad]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].ExternalColumns[Edad]"
+                      lineageId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].Columns[Edad]"
+                      name="Edad"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].Columns[Sauna]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].ExternalColumns[Sauna]"
+                      lineageId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].Columns[Sauna]"
+                      name="Sauna"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].Columns[Masaje]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].ExternalColumns[Masaje]"
+                      lineageId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].Columns[Masaje]"
+                      name="Masaje"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].Columns[Hidro]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].ExternalColumns[Hidro]"
+                      lineageId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].Columns[Hidro]"
+                      name="Hidro"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].Columns[Yoga]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].ExternalColumns[Yoga]"
+                      lineageId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].Columns[Yoga]"
+                      name="Yoga"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      dataType="wstr"
+                      length="50"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].ExternalColumns[Sexo]"
+                      dataType="ui1"
+                      name="Sexo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].ExternalColumns[ingresos]"
+                      dataType="r4"
+                      name="ingresos" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].ExternalColumns[PromVisit]"
+                      dataType="ui1"
+                      name="PromVisit" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].ExternalColumns[Edad]"
+                      dataType="ui1"
+                      name="Edad" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].ExternalColumns[Sauna]"
+                      dataType="ui1"
+                      name="Sauna" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].ExternalColumns[Masaje]"
+                      dataType="ui1"
+                      name="Masaje" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].ExternalColumns[Hidro]"
+                      dataType="ui1"
+                      name="Hidro" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].ExternalColumns[Yoga]"
+                      dataType="ui1"
+                      name="Yoga" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[id]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="id"
+                      lineageId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].Columns[id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[Sexo]"
+                      cachedDataType="ui1"
+                      cachedName="Sexo"
+                      lineageId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].Columns[Sexo]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Sexo]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[ingresos]"
+                      cachedDataType="r4"
+                      cachedName="ingresos"
+                      lineageId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].Columns[ingresos]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[ingresos]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[PromVisit]"
+                      cachedDataType="ui1"
+                      cachedName="PromVisit"
+                      lineageId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].Columns[PromVisit]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[PromVisit]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[Edad]"
+                      cachedDataType="ui1"
+                      cachedName="Edad"
+                      lineageId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].Columns[Edad]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Edad]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[Sauna]"
+                      cachedDataType="ui1"
+                      cachedName="Sauna"
+                      lineageId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].Columns[Sauna]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Sauna]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[Masaje]"
+                      cachedDataType="ui1"
+                      cachedName="Masaje"
+                      lineageId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].Columns[Masaje]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Masaje]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[Hidro]"
+                      cachedDataType="ui1"
+                      cachedName="Hidro"
+                      lineageId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].Columns[Hidro]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Hidro]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1].Columns[Yoga]"
+                      cachedDataType="ui1"
+                      cachedName="Yoga"
+                      lineageId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output].Columns[Yoga]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Yoga]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[id]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="id"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[Sexo]"
+                      cachedDataType="ui1"
+                      cachedName="Sexo"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Sexo]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Sexo]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[ingresos]"
+                      cachedDataType="r4"
+                      cachedName="ingresos"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[ingresos]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[ingresos]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[PromVisit]"
+                      cachedDataType="ui1"
+                      cachedName="PromVisit"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[PromVisit]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[PromVisit]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[Edad]"
+                      cachedDataType="ui1"
+                      cachedName="Edad"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Edad]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Edad]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[Sauna]"
+                      cachedDataType="ui1"
+                      cachedName="Sauna"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Sauna]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Sauna]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[Masaje]"
+                      cachedDataType="ui1"
+                      cachedName="Masaje"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Masaje]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Masaje]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[Hidro]"
+                      cachedDataType="ui1"
+                      cachedName="Hidro"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Hidro]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Hidro]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2].Columns[Yoga]"
+                      cachedDataType="ui1"
+                      cachedName="Yoga"
+                      lineageId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output].Columns[Yoga]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Yoga]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3]"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[id]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="id"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[id]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[id]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Sexo]"
+                      cachedDataType="ui1"
+                      cachedName="Sexo"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Sexo]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Sexo]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[ingresos]"
+                      cachedDataType="r4"
+                      cachedName="ingresos"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[ingresos]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[ingresos]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[PromVisit]"
+                      cachedDataType="ui1"
+                      cachedName="PromVisit"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[PromVisit]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[PromVisit]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Edad]"
+                      cachedDataType="ui1"
+                      cachedName="Edad"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Edad]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Edad]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Sauna]"
+                      cachedDataType="ui1"
+                      cachedName="Sauna"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Sauna]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Sauna]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Masaje]"
+                      cachedDataType="ui1"
+                      cachedName="Masaje"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Masaje]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Masaje]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Hidro]"
+                      cachedDataType="ui1"
+                      cachedName="Hidro"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Hidro]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Hidro]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3].Columns[Yoga]"
+                      cachedDataType="ui1"
+                      cachedName="Yoga"
+                      lineageId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output].Columns[Yoga]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Yoga]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 4]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 4">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[id]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[id]"
+                      name="id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Sexo]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Sexo]"
+                      name="Sexo" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[ingresos]"
+                      dataType="r4"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[ingresos]"
+                      name="ingresos" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[PromVisit]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[PromVisit]"
+                      name="PromVisit" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Edad]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Edad]"
+                      name="Edad" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Sauna]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Sauna]"
+                      name="Sauna" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Masaje]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Masaje]"
+                      name="Masaje" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Hidro]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Hidro]"
+                      name="Hidro" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Yoga]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1].Columns[Yoga]"
+                      name="Yoga" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -793,23 +1828,49 @@
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task 1.Paths[Data Conversion Output]"
-              endId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\Data Flow Task 1\Data Conversion 0 - 0.Outputs[Data Conversion Output]" />
-            <path
               refId="Package\Data Flow Task 1.Paths[Flat File Source Output]"
-              endId="Package\Data Flow Task 1\Data Conversion 0 - 0.Inputs[Data Conversion Input]"
+              endId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 1]"
               name="Flat File Source Output"
-              startId="Package\Data Flow Task 1\Source - SpaCentro_m20191007_csv.Outputs[Flat File Source Output]" />
+              startId="Package\Data Flow Task 1\Source - Tecla.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task 1.Paths[Flat File Source Output1]"
+              endId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 2]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task 1\Source - Escalon.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task 1.Paths[Flat File Source Output2]"
+              endId="Package\Data Flow Task 1\Union All.Inputs[Union All Input 3]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task 1\Source - Centro.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task 1.Paths[Union All Output 1]"
+              endId="Package\Data Flow Task 1\Destination - SpaCentro_m20191007.Inputs[Destination Input]"
+              name="Union All Output 1"
+              startId="Package\Data Flow Task 1\Union All.Outputs[Union All Output 1]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Drop table(s) SQL Task 1"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{EA3748E1-9F12-4130-848F-FDCF0CA91906}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Drop table(s) SQL Task 1"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022 RC0; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{8DD93794-F694-4653-A083-99B832690252}"
+          SQLTask:SqlStatementSource="drop table [dbo].[Spa_diego]&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Preparation SQL Task 1"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:DTSID="{CFDA4638-F300-4E11-80AC-564B4DAB2D43}"
+      DTS:DTSID="{38928DAA-DF90-470A-90FC-2D72EF6C7F40}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:FailPackageOnFailure="True"
       DTS:LocaleID="-1"
@@ -819,19 +1880,291 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{A62B692D-203E-406D-91CA-E120EB3CE4E6}"
-          SQLTask:SqlStatementSource="CREATE TABLE `SpaCentro_m20191007` (&#xA;`id` LongText,&#xA;`Sexo` Decimal(28,0),&#xA;`ingresos` Currency,&#xA;`PromVisit` Decimal(28,0),&#xA;`Edad` Decimal(18,0),&#xA;`Sauna` Decimal(18,0),&#xA;`Masaje` Decimal(18,0),&#xA;`Hidro` Decimal(18,0),&#xA;`Yoga` Decimal(18,0)&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{8DD93794-F694-4653-A083-99B832690252}"
+          SQLTask:SqlStatementSource="IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Spa_diego' and xtype='U')&#xA;CREATE TABLE  [dbo].[Spa_diego] (&#xA;[id] nvarchar(50),&#xA;[Sexo] tinyint,&#xA;[ingresos] real,&#xA;[PromVisit] tinyint,&#xA;[Edad] tinyint,&#xA;[Sauna] tinyint,&#xA;[Masaje] tinyint,&#xA;[Hidro] tinyint,&#xA;[Yoga] tinyint)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[{87B2FC5F-A1CF-47FC-9BE1-6F15387E77E9\}]"
+      DTS:refId="Package.PrecedenceConstraints[{54488471-4975-4552-AE34-4CED1416AD44\}]"
       DTS:CreationName=""
-      DTS:DTSID="{87B2FC5F-A1CF-47FC-9BE1-6F15387E77E9}"
+      DTS:DTSID="{54488471-4975-4552-AE34-4CED1416AD44}"
       DTS:From="Package\Preparation SQL Task 1"
       DTS:LogicalAnd="True"
-      DTS:ObjectName="{87B2FC5F-A1CF-47FC-9BE1-6F15387E77E9}"
+      DTS:ObjectName="{54488471-4975-4552-AE34-4CED1416AD44}"
       DTS:To="Package\Data Flow Task 1" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[{833668B9-CB29-4F33-AFE0-3FBDCC2E3249\}]"
+      DTS:CreationName=""
+      DTS:DTSID="{833668B9-CB29-4F33-AFE0-3FBDCC2E3249}"
+      DTS:From="Package\Drop table(s) SQL Task 1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="{833668B9-CB29-4F33-AFE0-3FBDCC2E3249}"
+      DTS:To="Package\Preparation SQL Task 1"
+      DTS:Value="2" />
   </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Data Flow Task 1"
+          TopLeft="283.5,208.5" />
+        <NodeLayout
+          Size="198,42"
+          Id="Package\Drop table(s) SQL Task 1"
+          TopLeft="5.50000000000001,5.5" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Preparation SQL Task 1"
+          TopLeft="9.50000000000003,107.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[{54488471-4975-4552-AE34-4CED1416AD44\}]"
+          TopLeft="104.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="259,59"
+              Start="0,0"
+              End="259,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.5"
+                    Point2="0,29.5"
+                    Point3="4,29.5" />
+                  <mssgle:LineSegment
+                    End="255,29.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="255,29.5"
+                    Point2="259,29.5"
+                    Point3="259,33.5" />
+                  <mssgle:LineSegment
+                    End="259,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[{833668B9-CB29-4F33-AFE0-3FBDCC2E3249\}]"
+          TopLeft="104.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-25.304453125,20.4453125,50.60890625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task 1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Data Flow Task 1\Source - Centro"
+          TopLeft="27.5,37.5" />
+        <NodeLayout
+          Size="252,42"
+          Id="Package\Data Flow Task 1\Destination - SpaCentro_m20191007"
+          TopLeft="262.5,382.5" />
+        <NodeLayout
+          Size="146,42"
+          Id="Package\Data Flow Task 1\Source - Tecla"
+          TopLeft="304.5,23.5" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Data Flow Task 1\Source - Escalon"
+          TopLeft="689.5,34.5" />
+        <NodeLayout
+          Size="121,42"
+          Id="Package\Data Flow Task 1\Union All"
+          TopLeft="337,220" />
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[Flat File Source Output]"
+          TopLeft="377.5,65.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="20,154.5"
+              Start="0,0"
+              End="20,147">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,73.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,73.25"
+                    Point2="0,77.25"
+                    Point3="4,77.25" />
+                  <mssgle:LineSegment
+                    End="16,77.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16,77.25"
+                    Point2="20,77.25"
+                    Point3="20,81.25" />
+                  <mssgle:LineSegment
+                    End="20,147" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[Flat File Source Output1]"
+          TopLeft="768,76.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-342.25,143.5"
+              Start="0,0"
+              End="-342.25,136">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,89.6037735849057" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,89.6037735849057"
+                    Point2="0,93.6037735849057"
+                    Point3="-4,93.6037735849057" />
+                  <mssgle:LineSegment
+                    End="-338.25,93.6037735849057" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-338.25,93.6037735849057"
+                    Point2="-342.25,93.6037735849057"
+                    Point3="-342.25,97.6037735849057" />
+                  <mssgle:LineSegment
+                    End="-342.25,136" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[Flat File Source Output2]"
+          TopLeft="104,79.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="265.25,140.5"
+              Start="0,0"
+              End="265.25,133">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,87.6469002695418" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,87.6469002695418"
+                    Point2="0,91.6469002695418"
+                    Point3="4,91.6469002695418" />
+                  <mssgle:LineSegment
+                    End="261.25,91.6469002695418" />
+                  <mssgle:CubicBezierSegment
+                    Point1="261.25,91.6469002695418"
+                    Point2="265.25,91.6469002695418"
+                    Point3="265.25,95.6469002695418" />
+                  <mssgle:LineSegment
+                    End="265.25,133" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[Union All Output 1]"
+          TopLeft="397.5,262">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-9,120.5"
+              Start="0,0"
+              End="-9,113">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,56.25"
+                    Point2="0,60.25"
+                    Point3="-4,60.25" />
+                  <mssgle:LineSegment
+                    End="-5,60.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5,60.25"
+                    Point2="-9,60.25"
+                    Point3="-9,64.25" />
+                  <mssgle:LineSegment
+                    End="-9,113" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task 1\Destination - SpaCentro_m20191007">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
